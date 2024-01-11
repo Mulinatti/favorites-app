@@ -4,7 +4,10 @@ export const CatalogComponent = styled.section`
 width: 100%;
 
 h1 {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+  margin: 0;
 }
 
 ul {

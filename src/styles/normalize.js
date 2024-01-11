@@ -27,6 +27,7 @@ main {
   max-width: 1440px;
   width: 100%;
   margin: auto;
+  position: relative;
 }
 h1 {
   font-size: 2em;

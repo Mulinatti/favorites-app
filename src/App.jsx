@@ -9,8 +9,8 @@ const App = () => {
   return (
     <BrowserRouter>
       <Normalize/>
-      <Header/>
       <MoviesProvider>
+        <Header/>
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/favorites" element={<Favorites/>}/>
