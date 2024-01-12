@@ -20,7 +20,7 @@ ul {
 body {
   margin: 0;
   min-height: 100vh;
-  background-color: ${colors.onyx};
+  background-color: #1c1c1c
 }
 main {
   display: block;
@@ -28,6 +28,8 @@ main {
   width: 100%;
   margin: auto;
   position: relative;
+  background-color: ${colors.onyx};
+  height: 100%;
 }
 h1 {
   font-size: 2em;

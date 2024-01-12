@@ -1,29 +1,29 @@
 [
   {
     "id": 1,
-    "name": "Born from Fire",
-    "category": "Action",
+    "name": "born from fire",
+    "category": "action",
     "favorite": false,
     "img": "https://img.freepik.com/fotos-gratis/close-no-treinamento-do-atleta_23-2150845570.jpg?w=360&t=st=1704837839~exp=1704838439~hmac=f27b822c9ddfe62ec45b4dfc7b67ee2c24cd73050a189bc0fc72b22f0b57a685"
   },
   {
     "id": 2,
-    "name": "Thunder Gods",
-    "category": "Drama",
+    "name": "thunder gods",
+    "category": "drama",
     "favorite": false,
     "img": "https://img.freepik.com/fotos-gratis/palco-de-fantasia-sendo-visto-da-perspectiva-da-plateia_1409-5880.jpg?w=740&t=st=1704838089~exp=1704838689~hmac=89128f773a062a0c21f55e83a3c0fb0f4a38f00b7ee2e541671a75ff35e0f796"
   },
   {
     "id": 3,
-    "name": "The Door",
-    "category": "Suspense",
+    "name": "the door",
+    "category": "suspense",
     "favorite": false,
     "img": "https://img.freepik.com/fotos-premium/parede-de-cimento-abstrata-escura-vazia-e-sala-de-estudio-gradiente-com-fumaca_303714-2679.jpg?w=360"
   },
   {
     "id": 4,
-    "name": "I Wish I was a Cat",
-    "category": "Comedy",
+    "name": "i wish i was a cat",
+    "category": "comedy",
     "favorite": false,
     "img": "https://img.freepik.com/fotos-premium/mulher-forte-liderada-por-cabeca-de-gato-mostra-biceps-apoie-o-ativismo-pelos-direitos-dos-animais-colagem-na-moda_407348-1407.jpg?w=740"
   }

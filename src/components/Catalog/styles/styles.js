@@ -15,5 +15,6 @@ ul {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
   place-items: center;
+  margin: 0;
 }
 `

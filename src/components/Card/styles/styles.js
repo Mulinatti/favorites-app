@@ -4,6 +4,7 @@ import colors from "../../../assets/colors"
 export const CardComponent = styled.li`
 
   list-style: none;
+  text-transform: capitalize;
 
   figure {
     border-radius: 10px;

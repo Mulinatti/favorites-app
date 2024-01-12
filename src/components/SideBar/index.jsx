@@ -1,18 +1,22 @@
 import React, { useContext } from "react";
 import { SideBarComponent } from "./styles/styles";
 import { MoviesContext } from "../../contexts/moviesContext";
+import categories from "../../utils/categories.json";
 
-const SideBar = () => {
-  const {sideBar} = useContext(MoviesContext);
+const SideBar = ({ handleFilter }) => {
+  const { sideBar } = useContext(MoviesContext);
 
   return (
     <SideBarComponent $sideBar={sideBar}>
       <p>Categorias</p>
       <menu>
-        <li>Action</li>
-        <li>Adventure</li>
-        <li>Suspense</li>
-        <li>Comedy</li>
+        {/*Filtrando por nome por enquanto, moviesList.json tem que ser alterado 
+        para receber o objeto categoria com id e nome*/}
+        {categories.map((category) => (
+          <li onClick={() => handleFilter(category.name)} key={category.id}>
+            {category.name}
+          </li>
+        ))}
       </menu>
     </SideBarComponent>
   );

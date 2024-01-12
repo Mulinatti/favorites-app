@@ -5,6 +5,8 @@ export const SideBarComponent = styled.aside`
   
   background-color: ${colors.onyx};
   box-shadow: 1px 2px 3px #000;
+
+  animation: sideBarAnimation .4s ease-in-out backwards;
   
   display: ${props => props.$sideBar ? "block" : "none"};
 
@@ -13,6 +15,7 @@ export const SideBarComponent = styled.aside`
   z-index: 1;
   position: absolute;
   top : 0;
+  left: 0;
 
   p {
     text-align: center;
@@ -29,11 +32,22 @@ export const SideBarComponent = styled.aside`
     li {
       cursor: pointer;
       padding: 1rem;
+      text-transform: capitalize;
 
       &:hover {
         background-color: #ffffff20;
         transition: all .2s ease-in-out;
       }
+    }
+  }
+
+  @keyframes sideBarAnimation {
+    from {
+      left: -100vw;
+    }
+
+    to {
+      left: 0;
     }
   }
 `
