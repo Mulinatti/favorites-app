@@ -33,6 +33,9 @@ export const SideBarComponent = styled.aside`
       cursor: pointer;
       padding: 1rem;
       text-transform: capitalize;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
 
       &:hover {
         background-color: #ffffff20;
