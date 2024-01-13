@@ -20,14 +20,16 @@ const SideBar = ({ handleFilter }) => {
           <li
             onClick={() => {
               handleFilter(category.name);
-              if(clicked.includes(category.id))
-                return setClicked(clicked.filter(id => id !== category.id))
-              setClicked([...clicked, category.id])
+              if (clicked.includes(category.id))
+                return setClicked(clicked.filter((id) => id !== category.id));
+              setClicked([...clicked, category.id]);
             }}
             key={category.id}
           >
             {category.name}
-            {clicked.includes(category.id) && <Check color={colors.viridian} size={17}/>}
+            {clicked.includes(category.id) && (
+              <Check color={colors.viridian} size={17} />
+            )}
           </li>
         ))}
       </menu>

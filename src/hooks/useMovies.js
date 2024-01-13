@@ -1,10 +1,11 @@
-import { useContext } from "react"
-import { MoviesContext } from "../contexts/moviesContext"
+import { useContext, useState } from "react";
+import { MoviesContext } from "../contexts/moviesContext";
 
 export const useMovies = () => {
-  const {movies, setMovies} = useContext(MoviesContext);
+  const { movies, setMovies } = useContext(MoviesContext);
+  const [searchFilter, setSearchFilter] = useState([]);
 
-  const setFavorite = (id) => {
+  const setFavorites = (id) => {
     setMovies(
       movies.map((movie) => {
         return movie.id === id
@@ -12,11 +13,19 @@ export const useMovies = () => {
           : movie;
       })
     );
-  }
+  };
+
+  const filterMovies = (category) => {
+    if (searchFilter.includes(category))
+      return setSearchFilter(searchFilter.filter((tag) => tag !== category));
+    setSearchFilter([...searchFilter, category]);
+  };
 
   return {
     movies,
     setMovies,
-    setFavorite
-  }
-}
+    setFavorites,
+    filterMovies,
+    searchFilter,
+  };
+};

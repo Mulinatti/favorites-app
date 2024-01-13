@@ -12,7 +12,7 @@ h1 {
 
 ul {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
   place-items: center;
   margin: 0;

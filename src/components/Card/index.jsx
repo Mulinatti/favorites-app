@@ -6,7 +6,7 @@ import { useMovies } from "../../hooks/useMovies";
 
 const Card = ({ movie }) => {
   const {id, name, category, img, favorite } = movie;
-  const { setFavorite } = useMovies();
+  const { setFavorites } = useMovies();
 
   return (
     <CardComponent $cover={img}>
@@ -16,7 +16,7 @@ const Card = ({ movie }) => {
         </div>
         <div>
           <figcaption>{name}</figcaption>
-          <i onClick={() => setFavorite(id)}>
+          <i onClick={() => setFavorites(id)}>
             {favorite ? (
               <Heart color="#99363650" fill={colors.crayola} />
             ) : (
