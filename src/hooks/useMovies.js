@@ -5,7 +5,9 @@ export const useMovies = () => {
   const { movies, setMovies } = useContext(MoviesContext);
   const [searchFilter, setSearchFilter] = useState([]);
 
-  const setFavorites = (id) => {
+  const setFavorites = (movie) => {
+    const { id } = movie;
+
     setMovies(
       movies.map((movie) => {
         return movie.id === id

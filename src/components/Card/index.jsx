@@ -16,7 +16,7 @@ const Card = ({ movie }) => {
         </div>
         <div>
           <figcaption>{name}</figcaption>
-          <i onClick={() => setFavorites(id)}>
+          <i onClick={() => setFavorites(movie)}>
             {favorite ? (
               <Heart color="#99363650" fill={colors.crayola} />
             ) : (

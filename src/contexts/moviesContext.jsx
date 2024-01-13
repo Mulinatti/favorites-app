@@ -6,6 +6,7 @@ export const MoviesContext = createContext();
 export const MoviesProvider = ({ children }) => {
   const [movies, setMovies] = useState(moviesList);
   const [sideBar, setSideBar] = useState(false);
+  const [favorites, setFavorites] = useState([]);
  
   return (
     <MoviesContext.Provider value={{ movies, setMovies, sideBar, setSideBar }}>
