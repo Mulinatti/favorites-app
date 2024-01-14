@@ -5,8 +5,8 @@ import colors from "../../assets/colors";
 import { useMovies } from "../../hooks/useMovies";
 
 const Card = ({ movie }) => {
-  const {id, name, category, img, favorite } = movie;
-  const { setFavorites } = useMovies();
+  const { name, category, img, favorite } = movie;
+  const { setFavoriteMovie, favorites } = useMovies();
 
   return (
     <CardComponent $cover={img}>
@@ -16,8 +16,8 @@ const Card = ({ movie }) => {
         </div>
         <div>
           <figcaption>{name}</figcaption>
-          <i onClick={() => setFavorites(movie)}>
-            {favorite ? (
+          <i onClick={() => setFavoriteMovie(movie)}>
+            {favorites.includes(movie) ? (
               <Heart color="#99363650" fill={colors.crayola} />
             ) : (
               <Heart />

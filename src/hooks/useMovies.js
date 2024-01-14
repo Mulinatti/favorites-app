@@ -2,19 +2,15 @@ import { useContext, useState } from "react";
 import { MoviesContext } from "../contexts/moviesContext";
 
 export const useMovies = () => {
-  const { movies, setMovies } = useContext(MoviesContext);
+  const { movies, setMovies, favorites, setFavorites } =
+    useContext(MoviesContext);
   const [searchFilter, setSearchFilter] = useState([]);
 
-  const setFavorites = (movie) => {
-    const { id } = movie;
-
-    setMovies(
-      movies.map((movie) => {
-        return movie.id === id
-          ? { ...movie, favorite: !movie.favorite }
-          : movie;
-      })
-    );
+  const setFavoriteMovie = (movie) => {
+    //const { id } = movie;
+    if(favorites.includes(movie))
+      return setFavorites(favorites.filter(favorite => favorite !== movie));
+    setFavorites([...favorites, movie]);
   };
 
   const filterMovies = (category) => {
@@ -26,8 +22,9 @@ export const useMovies = () => {
   return {
     movies,
     setMovies,
-    setFavorites,
+    setFavoriteMovie,
     filterMovies,
     searchFilter,
+    favorites
   };
 };
